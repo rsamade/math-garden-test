@@ -83,7 +83,7 @@ function prepareCanvas() {
 
             previousY = currentY;
             currentY = event.touches[0].clientY - canvas.offsetTop;
-
+            document.body.style.overflow = 'hidden';
             draw();
         }
         
