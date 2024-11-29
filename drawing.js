@@ -62,12 +62,12 @@ function prepareCanvas() {
         isPainting = true;
         currentX = event.touches[0].clientX - canvas.offsetLeft;
         currentY = event.touches[0].clientY - canvas.offsetTop;
-        
+        document.body.style.overflow = 'hidden';
     });
 
     canvas.addEventListener('touchend', function (event) {
         isPainting = false;
-
+        document.body.style.overflow = 'auto';
     });
 
     canvas.addEventListener('touchcancel', function (event) {
